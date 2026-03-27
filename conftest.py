@@ -4,6 +4,7 @@ from selenium import webdriver
 
 from api.ProjectApi import ProjectApi
 from configuration.ConfigProvider import ConfigProvider
+from testdata.DataProvider import DataProvider
 
 
 @pytest.fixture
@@ -23,8 +24,9 @@ def browser():
 
 @pytest.fixture(scope="session")
 def api_client():
+    DataProvider().get_email()
     api = ProjectApi()
-    login = 'k.ovsyannikova2702@gmail.com'
+    login = DataProvider().get_email()
     password = 'SkyPro114.2'
     companyId = '4075d252-8e95-40f7-a3f0-08502c97e043'
 
@@ -41,3 +43,8 @@ def api_client_no_auth():
 
     api.get_auth_token(login, password, companyId)
     return api
+
+
+@pytest.fixture
+def test_data():
+    return DataProvider()

@@ -3,10 +3,10 @@ from pages.AuthPage import AuthPage
 from pages.MainPage import MainPage
 
 
-def test_auth(browser):
+def test_auth(browser, test_data: dict):
     auth_page = AuthPage(browser)
-    email = 'k.ovsyannikova2702@gmail.com'
-    password = 'SkyPro114.2'
+    email = test_data.get("email")
+    password = test_data.get("password")
 
     auth_page.go()
     auth_page.login_as(email, password)
