@@ -1,4 +1,6 @@
 allure*
+allure-files/
+allure-report/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -509,7 +511,8 @@ $RECYCLE.BIN/
 *.lnk
 
 # Исключение для папки с тестами
-!test/
-!test/**
+!tests/
+!tests/**
+!tests/**/*.py
 
 # End of https://www.toptal.com/developers/gitignore/api/python,windows,visualstudiocode,test
