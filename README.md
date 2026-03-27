@@ -4,7 +4,7 @@
 
 ### Шаги
 1. Склонировать проект 'git clone https://github.com/aanitsirk/pytest_ui_api_template.git'
-2. Установить зависимости
+2. Установить зависимости 'pip install -r requirements.txt'
 3. Запустить тесты 'pytest'
 4. Сгенерировать отчет 'allure generate allure-files -o allure-report'
 5. Открыть отчет 'allure open allure-report'
@@ -15,7 +15,9 @@
 - requests
 - _sqlalchemy_
 - allure
-- config
+- configparser
+- json
+- webdriver manager
 
 ### Структура:
 - ./test – тесты
@@ -32,11 +34,4 @@
 - [Подсказка по markdown](https://www.markdownguide.org/basic-syntax/)
 - [Генератор файла .gitignore](https://www.toptal.com/developers/gitignore)
 - [Про configparser](https://docs.python.org/3/library/configparser.html)
-
-### Библиотеки (!)
-- pip install pytest
-- pip install selenium
-- pip install webdriver-manager
-- pip install allure-pytest
-- pip install requests
-- pip install sqlalchemy
+- [Про pip freeze](https://pip.pypa.io/en/stable/cli/pip_freeze/)
